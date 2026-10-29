@@ -1,32 +1,39 @@
 {
-    "name": "maniaplanet/dedicated-server-api",
+    "name": "skorlok/dedicated-server-api",
     "type": "library",
-    "description": "XML-RPC library to connect to Maniaplanet server",
-    "keywords": ["Maniaplanet", "Shootmania", "Trackmania"],
-    "homepage": "https://github.com/maniaplanet/dedicated-server-api",
+    "description": "XML-RPC library to connect to ManiaPlanet server",
+    "keywords": ["ManiaPlanet", "ShootMania", "TrackMania"],
+    "homepage": "https://github.com/skorlok/dedicated-server-api",
     "license": "LGPL-3.0",
     "authors": [
         {
-            "name": "Nadeo",
-            "email": "contact@nadeo.com",
+            "name": "NadeoLive",
+            "email": "livedev@nadeo.com",
             "homepage": "http://www.nadeo.com/"
+        },
+        {
+            "name": "Skorlok",
+            "email": "contact@skorlok.com",
+            "homepage": "https://skorlok.com"
         }
     ],
     "support": {
         "forum": "http://forum.maniaplanet.com/viewforum.php?f=40"
     },
     "require": {
-        "php": "^8.0",
-        "ext-sockets": "*"
+        "php": ">=5.3",
+        "ext-mbstring": "*",
+        "ext-simplexml": "*"
+    },
+    "suggest": {
+        "ext-xmlrpc": "Native XML-RPC encoding and decoding, a pure PHP implementation is used otherwise"
+    },
+    "conflict": {
+        "maniaplanet/dedicated-server-api": "*"
     },
     "autoload": {
         "psr-4": {
-            "Maniaplanet\\": "src/Maniaplanet"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "6.0.x-dev"
+            "Maniaplanet\\": "libraries/Maniaplanet"
         }
     }
 }
